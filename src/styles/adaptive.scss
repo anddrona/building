@@ -1,6 +1,16 @@
 body {
   overflow-x: hidden;
 }
+
+@media screen and (min-width: 1920px){
+  #main {
+    background: url(../images/backgroundMain.png) top center no-repeat;
+    background-size: cover;
+    position: center;
+    background-position: center;
+  }
+}
+
 @media screen and (max-width: 1252px) {
   .slick-prev:before {
     left: -38px;
@@ -22,6 +32,16 @@ body {
 @media screen and (max-width: 1224px) {
   #main {
     background-size: 100%;
+  }
+  #technology-container #technology #main-technology-block .technology-block:nth-child(3) .block-title-circle .technology-block-text-title{
+   width: 200px;
+  }
+  #technology-container #technology #main-technology-block .technology-block:nth-child(3) .technology-block-text-words{
+width: 239px;
+  }
+  #technology-container #technology #main-technology-block .technology-block:nth-child(3) {
+    top: 115px;
+    right: 5px;
   }
 }
 
@@ -217,7 +237,11 @@ body {
   }
 }
 
-
+@media screen and (max-width: 1100px){
+  #steps-container #steps-area .steps-block:nth-child(3) .steps-block-text .steps-block-text-words {
+    width: 200px;
+  }
+}
 @media screen and (max-width: 1080px) {
   #projects-container .project-block .project-block-text {
     margin-left: 12px;
@@ -296,6 +320,18 @@ body {
 }
 
 @media screen and (max-width: 1044px) {
+  #footer #footer-container .contact .contact-orderCall a .ellipse .ellipse-bg1 .ellipse-inner .ellipse-bg2 {
+    width: 17px;
+    height: 18px;
+  }
+  #footer #footer-container .contact .contact-orderCall a .ellipse .ellipse-bg1 .ellipse-inner {
+    width: 19px;
+    height: 19px;
+  }
+  #footer #footer-container .contact .contact-orderCall a .ellipse .ellipse-bg1 {
+    height: 28px;
+  }
+
   #projects-container .project-block #project-block-text-title2, #projects-container .project-block #project-block-text-title4 {
     margin-bottom: 20px;
   }
@@ -370,6 +406,12 @@ display: none;
 
 }
 
+@media screen and (max-width: 797px){
+  #footer .contact .contact-orderCall a .ellipse .ellipse-bg1 {
+    height: 29px;
+  }
+}
+
 @media screen and (max-width: 796px) {
   #examples-container #slider .bg-img {
     display: inline-block;
@@ -407,6 +449,23 @@ display: none;
 }
 }
 
+@media screen and (max-width: 795px){
+  .slick-next {
+    right: 0;
+  }
+}
+
+
+@media screen and (max-width: 787px){
+  .slick-dots {
+    width: 100%;
+  }
+  .slick-next {
+     right: 0;
+    display: none;
+  }
+}
+
 @media screen and (max-width: 767px) {
 #main #header #header-container .contact {
 display: none;
@@ -427,12 +486,18 @@ font-size: 14px;
 #main #header #header-container .logo {
 margin: 0 auto 0 259px;
 }
-#main #header #header-container #menu-container #menu .contact .contact-orderCall .circle {
-left: -7px;
-}
-#main #header #header-container #menu-container #menu .contact .contact-orderCall .order-call {
-margin-left: 10px;
-}
+
+  #main #header #header-container #menu-container #menu .contact .contact-orderCall a .ellipse {
+    position: absolute;
+    left: -2px;
+  }
+  #main #header #header-container #menu-container #menu .contact .contact-orderCall a {
+    justify-content: flex-start;
+    padding-left: 37px;
+  }
+  #main #header #header-container #menu-container #men .contact .contact-orderCall a .order-call {
+    font-size: 14px;
+  }
 #main #main-container .main-socialIcons {
 display: none;
 }
@@ -544,13 +609,43 @@ max-width: 706px;
 max-width: 684px;
 }
 }
+@media screen and (max-width: 737px){
+  #footer .contact .contact-orderCall a .ellipse {
+    left: 7px;
+  }
+}
+
+
+@media screen and (max-width: 736px) {
+  #footer #footer-container #footer-phone  .contact .contact-orderCall a {
+    justify-content: center;
+    padding-left: 36px;
+  }
+  #footer #footer-container .contact .contact-orderCall a .ellipse .ellipse-bg1 .ellipse-inner .ellipse-bg2 {
+    width: 18px;
+    height: 18px;
+  }
+  #footer #footer-container .contact .contact-orderCall a .ellipse .ellipse-bg1 .ellipse-inner {
+    width: 19px;
+    height: 19px;
+  }
+  #footer #footer-container .contact .contact-orderCall a .ellipse .ellipse-bg1 {
+    height: 28px;
+  }
+}
+@media screen and (max-width: 735px){
+  #footer #footer-container .contact .contact-orderCall a .ellipse {
+    position: absolute;
+    left: 69px;
+  }
+}
+
+
 @media screen and (max-width: 734px) {
 #technology-container #technology #main-technology-block .technology-block .block-title-circle{
 display: none;
 }
-#footer-container #footer-phone .contact .contact-orderCall .order-call {
-margin-left: 15px;
-}
+
 
 #main #header #header-container #menu-container #menu .contact .contact-orderCall .circle img {
 width: 50px;
@@ -561,6 +656,8 @@ margin-left: 12px;
 #footer #footer-container #place-block #place {
 text-align: center;
 }
+
+
 #footer #footer-container #footer-contact {
 width: 300px;
 margin: 0 30px;
@@ -624,9 +721,7 @@ line-height: 30px;
 left: 68px;
 bottom: -9px;
 }
-//.contact .contact-orderCall .order-call{
-//margin-left: 34px;
-//}
+
 #footer #footer-container #place-block #place div:first-child {
 margin-bottom: 18px;
 }
@@ -1732,25 +1827,32 @@ left: calc(50% - 172px);
 margin-top: 53px;
 }
 }
+@media screen and (max-width: 350px){
 
+}
 @media screen and (max-width: 359px){
   #consultation-container .form #form-consultation form .agree label {
     padding-left: 49px;
   }
+    #projects-container .project-block:nth-child(n) .project-block-img {
+      width: 330px;
+    }
+  #projects-container .project-block .project-block-img .project-block-img-items3 a:nth-child(2) {
+    padding: 0 13px;
+  }
 }
 
 
-@media screen and (max-width: 357px){
-.slick-current.image .bg-img {
-left: calc(50% - 183px);
-}
-}
+
 @media screen and (max-width: 356px){
 #examples-container #slider {
 max-width: 330px;
 }
 }
 @media screen and (max-width: 357px){
+  .slick-current.image .bg-img {
+    left: calc(50% - 183px);
+  }
 #steps-container #steps-area .steps-block .steps-block-text .steps-block-text-words{
 width: 205px;
 }
@@ -1838,7 +1940,14 @@ font-size: 15px;
     padding-left: 37px;
   }
 }
-
+@media screen and (max-width: 333px){
+  #footer #footer-container .contact {
+    width: 174px;
+  }
+  .contact .contact-orderCall a .ellipse {
+    left: 14px;
+  }
+}
 @media screen and (max-width: 330px){
   #projects-container .project-block .project-block-img .project-block-img-items3 a:nth-child(2) {
     padding: 0 10px;

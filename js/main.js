@@ -38,6 +38,12 @@ $(document).ready(() => {
     item_menu.click(() => {
         menuContainer.css('display', 'none');
     });
+    $('#main #header #header-container #menu-container #menu .contact .contact-orderCall').click(()=>{
+        menuContainer.css('display', 'none');
+    });
+    $('.socialIcons').click(()=>{
+        menuContainer.css('display', 'none');
+    });
 
 
     $('#open-modal').click(function () {

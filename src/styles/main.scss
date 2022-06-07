@@ -1,7 +1,7 @@
 body {
   margin: 0;
   background-color: rgb(37, 37, 45);
-  overflow-x:hidden;
+  overflow-x: hidden;
 }
 
 @font-face {
@@ -121,7 +121,7 @@ body {
                   padding-top: 15px;
                   padding-bottom: 15px;
 
-                  &:hover{
+                  &:hover {
                     list-style: disc;
                     margin-left: 20px;
                     color: rgb(236, 198, 107);
@@ -134,36 +134,32 @@ body {
             }
           }
 
-            .main-socialIcons {
-              display: flex;
-              align-items: center;
-              margin-top: 50px;
+          .main-socialIcons {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
 
-              .socialIcons {
-                &:nth-child(2) {
-                  padding: 0 30px;
-                }
+            .socialIcons {
+              &:nth-child(2) {
+                padding: 0 30px;
               }
             }
           }
         }
+      }
 
 
-        .logo {
-          padding: 20px 0;
-          text-align: center;
+      .logo {
+        padding: 20px 0;
+        text-align: center;
 
-          a {
-            text-decoration: none;
-          }
-
+        a {
+          text-decoration: none;
         }
+
       }
     }
-
-
-
-
+  }
 
 
   #main-container {
@@ -260,40 +256,91 @@ body {
     line-height: 15px;
   }
 
-  .contact-orderCall {
+  .contact-orderCall a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
     position: relative;
 
-    .circle {
+
+    .ellipse {
       position: absolute;
-      left: -4px;
-      bottom: -22px;
+      left: 11px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(35deg, rgb(255, 198, 0), black);
+      border-radius: 50%;
+      transition: all .3s;
+
+      .ellipse-bg1 {
+        width: 29px;
+        height: 28px;
+        background: #21222a;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+
+        .ellipse-inner {
+          width: 20px;
+          height: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(35deg, rgb(255, 198, 0), black);
+          border-radius: 50%;
+          transition: all .3s;
+
+          .ellipse-bg2 {
+            width: 19px;
+            height: 19px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #21222a;
+            border-radius: 50%;
+
+            .ellipse-point {
+              width: 7px;
+              height: 7px;
+              border-radius: 50%;
+              background: #ecc66b;
+              transition: all .3s;
+            }
+          }
+        }
+      }
     }
 
     .order-call {
-
-      a {
-        text-decoration: none;
-        font-size: 16px;
-        @include Museo-Sans-Cyrl-700;
-        color: rgb(236, 198, 107);
-        border-bottom: 1px solid rgb(236, 198, 107);
-      }
+      font-size: 16px;
+      @include Museo-Sans-Cyrl-700;
+      color: rgb(236, 198, 107);
+      border-bottom: 1px solid rgb(236, 198, 107);
     }
-
     &:hover {
-      .circle {
-        filter: drop-shadow(0 -1px 5px #ECC66C);
-        cursor: pointer;
+      .ellipse, .ellipse-inner{
+        box-shadow: 0 0 10px 0 rgba(236, 198, 107, 0.4);
       }
-
-
     }
   }
 
 }
+  .ellipse:hover, .ellipse:hover .ellipse-inner{
+    box-shadow: 0 0 10px 0 rgba(236, 198, 107, 0.4);
+  }
+  .ellipse:hover{
+    .ellipse-point{
+      box-shadow: 0 0 10px 5px rgba(236, 198, 107, 0.32);
+    }
+  }
+  .ellipse-point{
+    box-shadow: 0 0 10px 2px rgba(236, 198, 107, 0.32);
+  }
+
 .logo {
   margin-left: 110px;
 
@@ -423,13 +470,14 @@ body {
       .project-block-img-item1 {
         max-width: 588px;
         height: 373px;
-a{
-  img {
-    height: 100%;
-    width: 100%;
-  }
-}
-}
+
+        a {
+          img {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
 
 
       .project-block-img-items3 {
@@ -440,10 +488,11 @@ a{
         width: 100%;
 
         a {
-          img{
+          img {
             width: 180px;
           }
-          &:nth-child(2){
+
+          &:nth-child(2) {
             padding: 0 24px;
           }
         }
@@ -461,7 +510,7 @@ a{
     display: none;
   }
 
-  #project-less a{
+  #project-less a {
     font-size: 18px;
     font-family: "Museo Sans Cyrl 500", sans-serif;
     color: rgb(137, 137, 138);
@@ -470,12 +519,13 @@ a{
     align-items: center;
     width: 222px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 45px;
 
     #project-less-arrow {
       fill: rgb(137, 137, 138);
       transform: rotate(180deg);
-      svg{
+
+      svg {
         width: 15px;
         height: 15px;
       }
@@ -627,7 +677,6 @@ a {
       position: relative;
 
 
-
       img {
         width: 100%;
         height: 100%;
@@ -637,32 +686,36 @@ a {
         position: absolute;
         width: 25px;
         height: 25px;
-        &:nth-child(2){
+
+        &:nth-child(2) {
           left: 96px;
           top: 117px;
           position: absolute;
         }
-        &:nth-child(3){
+
+        &:nth-child(3) {
           left: 62px;
           bottom: 192px;
           position: absolute;
         }
-        &:nth-child(4){
+
+        &:nth-child(4) {
           right: 83px;
           top: 136px;
           position: absolute;
         }
-        &:nth-child(5){
+
+        &:nth-child(5) {
           right: 174px;
           bottom: 224px;
           position: absolute;
         }
-        &:nth-child(6){
+
+        &:nth-child(6) {
           right: calc(50% + 52px);
           bottom: 41px;
           position: absolute;
         }
-
 
 
         .technology-block-line-circle {
@@ -705,6 +758,7 @@ a {
         .block-title-circle {
           display: flex;
           justify-content: center;
+
           &:nth-child(3) {
             top: -5px;
             right: 18px;
@@ -742,13 +796,15 @@ a {
         &:nth-child(2) {
           bottom: 64px;
           left: 73px;
-          .block-title-circle{
-            div{
-              .technology-block-text-words{
+
+          .block-title-circle {
+            div {
+              .technology-block-text-words {
                 width: 230px;
               }
             }
-            .technology-block-line{
+
+            .technology-block-line {
               right: 16px;
             }
           }
@@ -767,9 +823,10 @@ a {
         &:nth-child(5) {
           bottom: -83px;
           right: 318px;
-          .block-title-circle{
-            div{
-              .technology-block-text-words{
+
+          .block-title-circle {
+            div {
+              .technology-block-text-words {
                 width: 227px;
               }
             }
@@ -778,32 +835,35 @@ a {
       }
     }
   }
-  #technology-block-after-click{
-      background-color:#2d2d36;
-      width: 290px;
-      height: 156px;
-      padding: 19px 16px;
-      box-sizing: border-box;
-      display: none;
-      z-index: 1000;
-      margin: 40px auto 0 auto;
+
+  #technology-block-after-click {
+    background-color: #2d2d36;
+    width: 290px;
+    height: 156px;
+    padding: 19px 16px;
+    box-sizing: border-box;
+    display: none;
+    z-index: 1000;
+    margin: 40px auto 0 auto;
 
 
-    .technology-block-text-title{
-        font-size: 18px;
-        font-family: "Museo Sans Cyrl 500",sans-serif;
-        color: rgb(255, 255, 255);
-        text-align: left;
+    .technology-block-text-title {
+      font-size: 18px;
+      font-family: "Museo Sans Cyrl 500", sans-serif;
+      color: rgb(255, 255, 255);
+      text-align: left;
       margin-bottom: 15px;
     }
-    .technology-block-text-words{
-        font-size: 16px;
-        font-family: "Museo Sans Cyrl 100",sans-serif;
-        color: rgb(255, 255, 255);
+
+    .technology-block-text-words {
+      font-size: 16px;
+      font-family: "Museo Sans Cyrl 100", sans-serif;
+      color: rgb(255, 255, 255);
       max-width: 354px;
     }
   }
-  &:before{
+
+  &:before {
     content: url("../images/треугольник.png");
     position: absolute;
     bottom: 116px;
@@ -813,18 +873,19 @@ a {
 
 }
 
-#open1, #open2, #open3, #open4, #open5{
+#open1, #open2, #open3, #open4, #open5 {
   display: none;
 }
-.active-open{
+
+.active-open {
   display: block;
 }
 
 
-
-#technology-container #technology #main-technology-block .technology-block:nth-child(1){
+#technology-container #technology #main-technology-block .technology-block:nth-child(1) {
   width: 300px;
 }
+
 //#technology-container #technology #main-technology-block .technology-block:nth-child(1) {
 //  top: 118px;
 //  left: 93px;
@@ -850,32 +911,36 @@ a {
       justify-content: space-evenly;
       width: 311px;
       margin-top: 140px;
-      &:nth-child(1){
-          .steps-block-text{
-            .steps-block-text-words{
-              width: 234px;
-            }
+
+      &:nth-child(1) {
+        .steps-block-text {
+          .steps-block-text-words {
+            width: 234px;
+          }
         }
       }
-      &:nth-child(3){
-          .steps-block-text{
-            .steps-block-text-words{
-              width: 258px;
-            }
+
+      &:nth-child(3) {
+        .steps-block-text {
+          .steps-block-text-words {
+            width: 258px;
+          }
         }
       }
-      &:nth-child(4){
-          .steps-block-text{
-            .steps-block-text-words{
-              width: 226px;
-            }
+
+      &:nth-child(4) {
+        .steps-block-text {
+          .steps-block-text-words {
+            width: 226px;
+          }
         }
       }
-      &:nth-child(6){
-          .steps-block-text{
-            .steps-block-text-words{
-              width: 216px;
-            }
+
+      &:nth-child(6) {
+        .steps-block-text {
+          .steps-block-text-words {
+            width: 216px;
+          }
         }
       }
 
@@ -888,10 +953,12 @@ a {
         div {
           z-index: 999;
           position: relative;
+
           svg {
             width: 100%;
             height: 100%;
             fill: rgb(236, 198, 107);
+
             &:hover {
               opacity: 90%;
             }
@@ -953,61 +1020,62 @@ a {
     max-width: 1044px;
     margin: 0 auto;
 
-.bg-img {
-  display: inline-block;
-  transition: .9s;
-  .slider-block-text {
-    font-size: 18px;
-    font-family: "Museo Sans Cyrl 500", sans-serif;
-    color: rgb(255, 255, 255);
-    background-color: rgb(49, 49, 57);
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 80px;
-    //display: none;
-    display: inline-block;
-    opacity: 0;
-    transition: .2s;
+    .bg-img {
+      display: inline-block;
+      transition: .9s;
 
-    div {
+      .slider-block-text {
+        font-size: 18px;
+        font-family: "Museo Sans Cyrl 500", sans-serif;
+        color: rgb(255, 255, 255);
+        background-color: rgb(49, 49, 57);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        //display: none;
+        display: inline-block;
+        opacity: 0;
+        transition: .2s;
 
-      div {
+        div {
 
-        line-height: 31px;
+          div {
 
-        span {
-          font-size: 16px;
-          font-family: "Museo Sans Cyrl 300", sans-serif;
-          color: rgb(255, 255, 255);
-          sup{
-            font-size: 12px;
+            line-height: 31px;
+
+            span {
+              font-size: 16px;
+              font-family: "Museo Sans Cyrl 300", sans-serif;
+              color: rgb(255, 255, 255);
+
+              sup {
+                font-size: 12px;
+              }
+            }
+
           }
+
         }
 
+
+        .line {
+          background-color: rgb(255, 255, 255);
+          width: 1px;
+          height: 45px;
+        }
       }
-
     }
-
-
-    .line {
-      background-color: rgb(255, 255, 255);
-      width: 1px;
-      height: 45px;
-    }
-  }
-}
   }
 
 }
 
 
-
-#conference{
-width: 60px;
+#conference {
+  width: 60px;
 }
 
 .slick-prev:before, .slick-next:before {
@@ -1069,8 +1137,6 @@ width: 60px;
   display: flex;
   padding-bottom: 65px;
 }
-
-
 
 
 #guarantee-container {
@@ -1202,7 +1268,8 @@ width: 60px;
 
   .form {
     width: 512px;
-    #form-consultation{
+
+    #form-consultation {
       h2 {
         line-height: 45px;
         margin-bottom: 30px;
@@ -1212,12 +1279,12 @@ width: 60px;
       }
     }
 
-      span {
-        display: none;
-        margin: 0 auto;
-        font-size: 18px;
-        font-family: "Museo Sans Cyrl 500", sans-serif;
-        color: rgb(255, 255, 255);
+    span {
+      display: none;
+      margin: 0 auto;
+      font-size: 18px;
+      font-family: "Museo Sans Cyrl 500", sans-serif;
+      color: rgb(255, 255, 255);
 
     }
   }
@@ -1248,13 +1315,14 @@ width: 60px;
 
 }
 
-#project-block-text-title1,#project-block-text-title2,#project-block-text-title3,#project-block-text-title4,#project-block-text-title5 {
+#project-block-text-title1, #project-block-text-title2, #project-block-text-title3, #project-block-text-title4, #project-block-text-title5 {
   display: none;
   font-size: 18px;
   font-family: "Museo Sans Cyrl 500", sans-serif;
   color: rgb(255, 255, 255);
   line-height: 3.333;
 }
+
 .form {
 
   form {
@@ -1336,7 +1404,6 @@ width: 60px;
 
 
 .agree {
-  //width: 392px;
   display: flex;
   align-items: flex-start;
   padding-top: 15px;
@@ -1355,23 +1422,29 @@ width: 60px;
     justify-content: space-evenly;
     align-items: center;
     position: relative;
-
+  #span-check1, #span-check2{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-width: 1px;
+    background: transparent;
+    border-color: rgb(255, 255, 255);
+    border-style: solid;
+    vertical-align: middle;
+    margin-left: -10px;
+    margin-right: 30px;
+    position: relative;
     &:before {
       content: ' ';
-      display: inline-block;
-      width: 18px;
-      height: 18px;
-      border-width: 1px;
-      background: transparent;
-      border-color: rgb(255, 255, 255);
-      border-style: solid;
-      vertical-align: middle;
-      margin-left: -10px;
-      margin-right: 30px;
       transition: 0.2s;
+      position: absolute;
+      top: -5px;
+      left: 1px;
 
     }
-    &:hover{
+  }
+
+    &:hover {
       cursor: pointer;
     }
   }
@@ -1384,7 +1457,8 @@ width: 60px;
     line-height: 1.286;
     width: 318px;
     text-align: left;
-    &:hover{
+
+    &:hover {
       cursor: pointer;
     }
 
@@ -1398,10 +1472,10 @@ width: 60px;
 }
 
 #consultation-container {
-  .form{
-    #form-consultation{
-      form{
-        .agree{
+  .form {
+    #form-consultation {
+      form {
+        .agree {
           &.error {
             label {
               &:before {
@@ -1415,15 +1489,16 @@ width: 60px;
   }
 }
 
-#reservation-container{
-  #reservation{
-    .form{
-      #form-reservation{
-        h2{
+#reservation-container {
+  #reservation {
+    .form {
+      #form-reservation {
+        h2 {
           visibility: inherit !important;
         }
-        form{
-          .agree{
+
+        form {
+          .agree {
             &.error {
               label {
                 &:before {
@@ -1437,10 +1512,12 @@ width: 60px;
     }
   }
 }
-input[type='checkbox']:checked + label::before {
+
+input[type='checkbox']:checked + #span-check1::before {
   content: url("../images/check.svg");
-
-
+}
+input[type='checkbox']:checked + #span-check2::before {
+  content: url("../images/check.svg");
 }
 
 #map-bg {
@@ -1449,122 +1526,129 @@ input[type='checkbox']:checked + label::before {
   background-position: center center;
 
 
-
   #map-container {
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  #map-block {
+    margin: 0 auto;
+    max-width: 441px;
+    padding-top: 333px;
+    padding-bottom: 160px;
+    position: relative;
+
+    .location {
+      width: 30px;
+      position: absolute;
+
+      svg {
+        fill: #ecc66b;
+        width: 100%;
+        height: 100%;
+        -webkit-filter: drop-shadow(0px 10px 12px #ecc66b);
+
+        &:hover {
+          opacity: 0.8;
+          filter: drop-shadow(0 14px 10px #ecc66b);
+          -webkit-filter: drop-shadow(0 10px 10px #ecc66b);
+        }
+      }
+
+      &:nth-child(4) {
+        top: 259px;
+        left: -251px;
+      }
+
+      &:nth-child(5) {
+        top: calc(50% - 24px);
+        left: -260px;
+      }
+
+      &:nth-child(6) {
+        top: calc(50% - 112px);
+        left: -169px;
+      }
+
+      &:nth-child(7) {
+        top: calc(50% - 54px);
+        left: -101px;
+      }
+
+      &:nth-child(8) {
+        top: calc(50% - 39px);
+        left: -140px;
+      }
+
+      &:nth-child(9) {
+        left: -91px;
+        bottom: calc(50% - 79px);
+      }
+
+      &:nth-child(10) {
+        right: -117px;
+        bottom: calc(50% - 94px);
+      }
+
+      &:nth-child(11) {
+        right: -152px;
+        bottom: calc(50% - 129px);
+      }
+
+      &:nth-child(12) {
+        //right: -192px;
+        left: 584px;
+        top: calc(50% - 186px);
+      }
+
+      &:nth-child(13) {
+        right: -55px;
+        top: calc(50% - 85px);
+      }
+
+      &:nth-child(14) {
+        right: -165px;
+        top: calc(50% - 54px);
+      }
+
     }
 
-    #map-block {
+    h2 {
+      font-size: 60px;
+      font-family: "Neumann Regular", sans-serif;
+      color: rgb(236, 198, 107);
+      line-height: 1.167;
+      width: 384px;
       margin: 0 auto;
-      max-width: 441px;
-      padding-top: 333px;
-      padding-bottom: 160px;
-      position: relative;
-      .location {
-        width: 30px;
-        position: absolute;
+    }
 
-        svg {
-          fill: #ecc66b;
-          width: 100%;
-          height: 100%;
-          -webkit-filter: drop-shadow(0px 10px 12px #ecc66b);
+    #map-text {
+      font-size: 18px;
+      font-family: "Museo Sans Cyrl 500", sans-serif;
+      color: rgb(255, 255, 255);
+      line-height: 1.278;
+      text-align: center;
+      margin-top: 47px;
+      margin-bottom: 43px;
+    }
 
-          &:hover {
-            opacity: 0.8;
-            filter: drop-shadow(0 14px 10px #ecc66b);
-            -webkit-filter: drop-shadow(0 10px 10px #ecc66b);
-          }
-        }
+    div {
+      text-align: center;
 
-        &:nth-child(4) {
-          top: 259px;
-          left: -251px;
-        }
+      button {
+        width: 307px;
+        padding: 19px 0;
 
-        &:nth-child(5) {
-          top: calc(50% - 24px);
-          left: -260px;
-        }
-        &:nth-child(6) {
-          top: calc(50% - 112px);
-          left: -169px;
-        }
-        &:nth-child(7) {
-          top: calc(50% - 54px);
-          left: -101px;
-        }
-        &:nth-child(8) {
-          top: calc(50% - 39px);
-          left: -140px;
-        }
-        &:nth-child(9) {
-          left: -91px;
-          bottom: calc(50% - 79px);
-        }
-        &:nth-child(10) {
-          right: -117px;
-          bottom: calc(50% - 94px);
-        }
-        &:nth-child(11) {
-          right: -152px;
-          bottom: calc(50% - 129px);
-        }
-        &:nth-child(12) {
-          //right: -192px;
-          left: 584px;
-          top: calc(50% - 186px);
-        }
-        &:nth-child(13) {
-          right: -55px;
-          top: calc(50% - 85px);
-        }
-        &:nth-child(14) {
-          right: -165px;
-          top: calc(50% - 54px);
-        }
-
-      }
-
-      h2 {
-        font-size: 60px;
-        font-family: "Neumann Regular", sans-serif;
-        color: rgb(236, 198, 107);
-        line-height: 1.167;
-        width: 384px;
-        margin: 0 auto;
-      }
-
-      #map-text {
-        font-size: 18px;
-        font-family: "Museo Sans Cyrl 500", sans-serif;
-        color: rgb(255, 255, 255);
-        line-height: 1.278;
-        text-align: center;
-        margin-top: 47px;
-        margin-bottom: 43px;
-      }
-
-      div {
-        text-align: center;
-
-        button {
-          width: 307px;
-          padding: 19px 0;
-
-          &:hover {
-            cursor: pointer;
-            background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(234, 193, 138) 100%);
-            background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(234, 193, 138) 100%);
-            background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(234, 193, 138) 100%);
-          }
+        &:hover {
+          cursor: pointer;
+          background-image: -moz-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(234, 193, 138) 100%);
+          background-image: -webkit-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(234, 193, 138) 100%);
+          background-image: -ms-linear-gradient(0deg, rgb(252, 195, 114) 0%, rgb(234, 193, 138) 100%);
         }
       }
     }
   }
-
-
+}
 
 
 #footer {
@@ -1592,8 +1676,9 @@ input[type='checkbox']:checked + label::before {
 
       #place {
         text-align: left;
-        div{
-          &:first-child{
+
+        div {
+          &:first-child {
             margin-bottom: 30px;
           }
         }
@@ -1603,6 +1688,7 @@ input[type='checkbox']:checked + label::before {
 
     #footer-contact {
       margin-right: 98px;
+
       .logo {
         //max-width: 94px;
         text-align: center;
@@ -1629,14 +1715,11 @@ input[type='checkbox']:checked + label::before {
 
       }
     }
-
-    .contact{
-      .contact-orderCall{
-        .circle{
-          left: 4px;
-          bottom: -9px;
-        }
-      }
+    .ellipse:hover, .ellipse:hover .ellipse-inner{
+      box-shadow: 0 0 10px 0 rgba(236, 198, 107, 0.4);
+    }
+    .ellipse-point, .ellipse:hover {
+      box-shadow: 0 0 10px 2px rgb(236 198 107 / 32%);
     }
   }
 }
@@ -1707,7 +1790,7 @@ input[type='checkbox']:checked + label::before {
 }
 
 
-.slick-current.image .bg-img{
+.slick-current.image .bg-img {
   width: 600px;
   height: 427px;
   box-sizing: border-box;
@@ -1718,14 +1801,15 @@ input[type='checkbox']:checked + label::before {
   //left: calc(50% - 11vw);
   //top: calc(50% - 32vh);
 }
-.image{
+
+.image {
   position: relative;
   width: 360px;
   height: 287px;
   padding: 65px 0;
 }
 
-.bg-img{
+.bg-img {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -1734,17 +1818,14 @@ input[type='checkbox']:checked + label::before {
 }
 
 
-
-
-
-
-#examples-container #slider .slick-current.image .slider-block-text{
+#examples-container #slider .slick-current.image .slider-block-text {
   display: flex;
   opacity: 1;
   transition: .9s;
 }
 
-#main #header #header-container #menu-container #menu .contact{
-  display:none;
+#main #header #header-container #menu-container #menu .contact {
+  display: none;
 }
+
 @import "adaptive";
