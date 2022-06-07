@@ -59,7 +59,7 @@ $(document).ready(() => {
         e.preventDefault();
         let name = $('#namePopup');
         let phone = $('#phonePopup');
-        let check = $('input[type="checkbox"]:checked');
+        let check = $('#form-reservation input[type="checkbox"]:checked');
 
 
         if (name.val() && phone.val() && check.length > 0) {
@@ -119,7 +119,7 @@ $(document).ready(() => {
         e.preventDefault();
         let name = $('#nameConsultation');
         let phone = $('#phoneConsultation');
-        let check = $('input[type="checkbox"]:checked');
+        let check = $('#consultation-container input[type="checkbox"]:checked');
         if (name.val() && phone.val() && check.length > 0) {
             $.ajax({
                 type: 'post',
