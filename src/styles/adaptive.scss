@@ -1846,6 +1846,11 @@ margin-top: 53px;
 max-width: 330px;
 }
 }
+@media screen and (max-width: 360px){
+  #footer #footer-container .contact .contact-orderCall a .ellipse {
+    left: 59px;
+  }
+}
 @media screen and (max-width: 357px){
   .slick-current.image .bg-img {
     left: calc(50% - 183px);
@@ -1944,6 +1949,9 @@ font-size: 15px;
   .contact .contact-orderCall a .ellipse {
     left: 14px;
   }
+  #footer #footer-container .contact .contact-orderCall a .ellipse {
+    left: 5px;
+  }
 }
 @media screen and (max-width: 330px){
   #projects-container .project-block .project-block-img .project-block-img-items3 a:nth-child(2) {
@@ -1968,12 +1976,12 @@ width: 280px;
 #footer #footer-container .contact {
 width: 255px;
 }
-#footer #footer-container .contact .contact-orderCall .circle {
-left: 45px;
-}
 #examples-container #slider .image .slider-block-text div:nth-child(1) {
 width: 124px;
 }
+  #footer #footer-container .contact .contact-orderCall a .ellipse {
+    left: 45px;
+  }
   #consultation-container .form #form-consultation form .agree label {
     padding-left: 30px;
   }

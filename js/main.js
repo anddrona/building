@@ -104,12 +104,13 @@ $(document).ready(() => {
             if (!check.length > 0){
                 $('#reservation-container .agree .agree-text').css('color','#ff5858');
                 $('#reservation-container .agree .agree-text a').css('color','red');
-
+                $('.agree label #span-check2').css('border', '1px solid #ff5858');
                 $('#reservation-container .agree').addClass('error');
             }else {
                 $('#reservation-container .agree .agree-text').css('color','white');
                 $('#reservation-container .agree .agree-text a').css('color','white');
                 $('#reservation-container .agree').removeClass('error');
+                $('.agree label #span-check2').css('border', '1px solid white');
             }
                 return false
         }
@@ -163,12 +164,14 @@ $(document).ready(() => {
             if (!check.length > 0){
                 $('#form-consultation .agree .agree-text').css('color','#ff5858');
                 $('#form-consultation .agree .agree-text a').css('color','red');
-               $('#form-consultation .agree').addClass('error')
+               $('#form-consultation .agree').addClass('error');
+                $('.agree label #span-check1').css('border', '1px solid #ff5858');
 
             }else {
                 $('#form-consultation .agree .agree-text').css('color','white');
                 $('#form-consultation .agree .agree-text a').css('color','white');
-                $('#form-consultation .agree').removeClass('error')
+                $('#form-consultation .agree').removeClass('error');
+                $('.agree label #span-check1').css('border', '1px solid white');
             }
             return false
         }
